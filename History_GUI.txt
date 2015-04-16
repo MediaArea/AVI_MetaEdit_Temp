@@ -4,6 +4,10 @@ Notes:
 - Deleted
 x Correction
 
+Version 1.0.1, 2015-
+-------------
+x Potential crash during verification of a MD5 present in the file
+
 Version 1.0.0, 2012-01-18
 -------------
 + Initial version

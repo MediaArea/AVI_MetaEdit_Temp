@@ -1396,8 +1396,8 @@ void Riff_Handler::Options_Update()
         PerFile_Information.str(PerFile_Information_Temp);
         
         //Checking
-        Ztring md5generated(Chunks->Global->MD5Generated->Strings["md5generated"]); md5generated.MakeLowerCase();
-        Ztring md5stored(Chunks->Global->MD5Stored->Strings["md5stored"]); md5stored.MakeLowerCase();
+        Ztring md5generated(Chunks->Global->MD5Generated?Chunks->Global->MD5Generated->Strings["md5generated"]:Ztring()); md5generated.MakeLowerCase();
+        Ztring md5stored(Chunks->Global->MD5Stored?Chunks->Global->MD5Stored->Strings["md5stored"]:Ztring()); md5stored.MakeLowerCase();
         if (!(Chunks->Global->MD5Stored && !md5stored.empty()))
         {
             Information<<Chunks->Global->File_Name<<": MD5, no existing MD5 chunk"<<endl;
