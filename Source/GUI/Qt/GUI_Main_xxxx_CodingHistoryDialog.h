@@ -14,10 +14,10 @@
 
 //---------------------------------------------------------------------------
 class Core;
-#include <QtGui/QDialog>
+#include <QDialog>
 #include "ZenLib/ZtringListList.h"
-#include <QtGui/QItemDelegate>
-#include <QtGui/QTableWidget>
+#include <QItemDelegate>
+#include <QTableWidget>
 class QEvent;
 class QComboBox;
 class QTextEdit;

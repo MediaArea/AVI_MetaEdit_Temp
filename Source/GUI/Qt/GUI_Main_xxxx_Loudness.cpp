@@ -13,15 +13,15 @@
 #include "Common/Core.h"
 #include "ZenLib/Ztring.h"
 #include "ZenLib/File.h"
-#include <QtGui/QLabel>
+#include <QLabel>
 #include <QtCore/QEvent>
-#include <QtGui/QDoubleSpinBox>
-#include <QtGui/QGridLayout>
-#include <QtGui/QDialogButtonBox>
-#include <QtGui/QDesktopWidget>
-#include <QtGui/QApplication>
-#include <QtGui/QMessageBox>
-#include <QtGui/QIcon>
+#include <QDoubleSpinBox>
+#include <QGridLayout>
+#include <QDialogButtonBox>
+#include <QDesktopWidget>
+#include <QApplication>
+#include <QMessageBox>
+#include <QIcon>
 //---------------------------------------------------------------------------
 
 //***************************************************************************
@@ -40,7 +40,7 @@ GUI_Main_xxxx_Loudness::GUI_Main_xxxx_Loudness(Core* _C, const std::string &File
     //Configuration
     setWindowFlags(windowFlags()&(0xFFFFFFFF-Qt::WindowContextHelpButtonHint));
     setWindowTitle(Field.c_str());
-    setWindowIcon (QIcon(":/Image/Brand/Logo.gif"));
+    setWindowIcon (QIcon(":/Image/Brand/Logo.png"));
 
     //Buttons
     Dialog=new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel);
@@ -96,7 +96,7 @@ void GUI_Main_xxxx_Loudness::OnAccept ()
             MessageBox.setStandardButtons(QMessageBox::Ok);
         #endif // (QT_VERSION >= 0x040200)
         MessageBox.setIcon(QMessageBox::Warning);
-        MessageBox.setWindowIcon(QIcon(":/Image/Brand/Logo.gif"));
+        MessageBox.setWindowIcon(QIcon(":/Image/Brand/Logo.png"));
         MessageBox.exec();
         return;
     }

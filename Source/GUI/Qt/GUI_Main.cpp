@@ -12,8 +12,8 @@
 #include "Common/Core.h"
 #include <vector>
 #include <algorithm>
-#include <QtGui/QStatusBar>
-#include <QtGui/QTextEdit>
+#include <QStatusBar>
+#include <QTextEdit>
 #include "GUI/Qt/GUI_Main_Technical_Table.h"
 #include "GUI/Qt/GUI_Main_Technical_Text.h"
 #include "GUI/Qt/GUI_Main_Core_Table.h"
@@ -25,12 +25,12 @@
 #include <QtCore/QEvent>
 #include <QtCore/QMimeData>
 #include <QtCore/QUrl>
-#include <QtGui/QApplication>
-#include <QtGui/QDropEvent>
-#include <QtGui/QDragEnterEvent>
-#include <QtGui/QMessageBox>
-#include <QtGui/QDesktopWidget>
-#include <QtGui/QProgressDialog>
+#include <QApplication>
+#include <QDropEvent>
+#include <QDragEnterEvent>
+#include <QMessageBox>
+#include <QDesktopWidget>
+#include <QProgressDialog>
 #include <QtCore/QThread>
 #include <QtCore/QTimer>
 #include "ZenLib/Ztring.h"
@@ -90,7 +90,7 @@ GUI_Main::GUI_Main(Core* _C)
     
     //GUI
     setWindowTitle("AVI MetaEdit - U.S. National Archives");
-    setWindowIcon (QIcon(":/Image/Brand/Logo.gif"));
+    setWindowIcon (QIcon(":/Image/Brand/Logo.png"));
 
     /*
     QMessageBox MessageBox;
@@ -98,7 +98,7 @@ GUI_Main::GUI_Main(Core* _C)
     MessageBox.setText("This is an unstable version of AVI MetaEdit and your files can be damaged.\nBACKUP your files before you edit them");
     MessageBox.setDefaultButton(QMessageBox::Ok);
     MessageBox.setIcon(QMessageBox::Warning);
-    MessageBox.setWindowIcon(QIcon(":/Image/Brand/Logo.gif"));
+    MessageBox.setWindowIcon(QIcon(":/Image/Brand/Logo.png"));
     MessageBox.exec();
     */
 
@@ -244,7 +244,7 @@ bool GUI_Main::Close(const string &FileName)
                 #endif // (QT_VERSION >= 0x040300)
             #endif // (QT_VERSION >= 0x040200)
             MessageBox.setIcon(QMessageBox::Warning);
-            MessageBox.setWindowIcon(QIcon(":/Image/Brand/Logo.gif"));
+            MessageBox.setWindowIcon(QIcon(":/Image/Brand/Logo.png"));
             switch (MessageBox.exec())
             {
                 case QMessageBox::Save    : // Save was clicked
@@ -288,7 +288,7 @@ bool GUI_Main::Close(const string &FileName)
                 #endif // (QT_VERSION >= 0x040300)
             #endif // (QT_VERSION >= 0x040200)
             MessageBox.setIcon(QMessageBox::Warning);
-            MessageBox.setWindowIcon(QIcon(":/Image/Brand/Logo.gif"));
+            MessageBox.setWindowIcon(QIcon(":/Image/Brand/Logo.png"));
             switch (MessageBox.exec())
             {
                 case QMessageBox::Save    : // Save was clicked

@@ -15,8 +15,8 @@
 //---------------------------------------------------------------------------
 class Core;
 #include "GUI/Qt/GUI_Preferences.h"
-#include <QtGui/QTableWidget>
-#include <QtGui/QItemDelegate>
+#include <QTableWidget>
+#include <QItemDelegate>
 #include <string>
 class QEvent;
 class GUI_Main;

@@ -7,7 +7,7 @@
  <qresource><file>Image/Menu/Options_Prefs.png</file></qresource>
  <qresource><file>Image/Menu/Help.png</file></qresource>
  <qresource><file>Image/Menu/About.png</file></qresource>
- <qresource><file>Image/Brand/Logo.gif</file></qresource>
+ <qresource><file>Image/Brand/Logo.png</file></qresource>
  <qresource><file>Documentation/index.html</file></qresource>
  <qresource><file>Documentation/core_doc_help.html</file></qresource>
  <qresource><file>Documentation/errors.html</file></qresource>

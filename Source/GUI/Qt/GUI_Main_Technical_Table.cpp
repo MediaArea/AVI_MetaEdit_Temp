@@ -13,16 +13,16 @@
 #include "GUI/Qt/GUI_Main_xxxx_TextEditDialog.h"
 #include "Common/Core.h"
 #include "ZenLib/ZtringListList.h"
-#include <QtGui/QLabel>
+#include <QLabel>
 #include <QtCore/QEvent>
-#include <QtGui/QFont>
-#include <QtGui/QTextEdit>
-#include <QtGui/QHeaderView>
-#include <QtGui/QContextMenuEvent>
-#include <QtGui/QAction>
-#include <QtGui/QMenu>
-#include <QtGui/QFileDialog>
-#include <QtGui/QMessageBox>
+#include <QFont>
+#include <QTextEdit>
+#include <QHeaderView>
+#include <QContextMenuEvent>
+#include <QAction>
+#include <QMenu>
+#include <QFileDialog>
+#include <QMessageBox>
 using namespace ZenLib;
 //---------------------------------------------------------------------------
 
@@ -194,7 +194,7 @@ void GUI_Main_Technical_Table::contextMenuEvent (QContextMenuEvent* Event)
                 MessageBox.setStandardButtons(QMessageBox::Ok);
             #endif // (QT_VERSION >= 0x040200)
             MessageBox.setIcon(QMessageBox::Warning);
-            MessageBox.setWindowIcon(QIcon(":/Image/Brand/Logo.gif"));
+            MessageBox.setWindowIcon(QIcon(":/Image/Brand/Logo.png"));
             MessageBox.exec();
             return;
         }

@@ -13,7 +13,7 @@
 //---------------------------------------------------------------------------
 
 //---------------------------------------------------------------------------
-#include <QtGui/QDialog>
+#include <QDialog>
 class QPushButton;
 class QListWidget;
 class QTextEdit;

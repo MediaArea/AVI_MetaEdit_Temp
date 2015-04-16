@@ -14,7 +14,7 @@
 
 //---------------------------------------------------------------------------
 class Core;
-#include <QtGui/QDialog>
+#include <QDialog>
 class QDoubleSpinBox;
 class QDialogButtonBox;
 //---------------------------------------------------------------------------

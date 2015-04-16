@@ -13,22 +13,22 @@
 #include "Common/Core.h"
 #include "ZenLib/Ztring.h"
 #include "ZenLib/File.h"
-#include <QtGui/QLabel>
+#include <QLabel>
 #include <QtCore/QEvent>
-#include <QtGui/QFont>
-#include <QtGui/QGridLayout>
-#include <QtGui/QPushButton>
-#include <QtGui/QDialogButtonBox>
-#include <QtGui/QTextEdit>
-#include <QtGui/QFileDialog>
-#include <QtGui/QCalendarWidget>
-#include <QtGui/QTimeEdit>
-#include <QtGui/QLabel>
-#include <QtGui/QCheckBox>
-#include <QtGui/QTabWidget>
-#include <QtGui/QDesktopWidget>
-#include <QtGui/QApplication>
-#include <QtGui/QMessageBox>
+#include <QFont>
+#include <QGridLayout>
+#include <QPushButton>
+#include <QDialogButtonBox>
+#include <QTextEdit>
+#include <QFileDialog>
+#include <QCalendarWidget>
+#include <QTimeEdit>
+#include <QLabel>
+#include <QCheckBox>
+#include <QTabWidget>
+#include <QDesktopWidget>
+#include <QApplication>
+#include <QMessageBox>
 #include <ctime>
 using namespace std;
 //---------------------------------------------------------------------------
@@ -49,7 +49,7 @@ GUI_Main_xxxx_DateDialog::GUI_Main_xxxx_DateDialog(Core* _C, const std::string &
     //Configuration
     setWindowFlags(windowFlags()&(0xFFFFFFFF-Qt::WindowContextHelpButtonHint));
     setWindowTitle(QString::fromUtf8(Field.c_str()));
-    setWindowIcon (QIcon(":/Image/Brand/Logo.gif"));
+    setWindowIcon (QIcon(":/Image/Brand/Logo.png"));
 
     //Buttons
     Dialog=new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel);
@@ -93,7 +93,7 @@ GUI_Main_xxxx_DateDialog::GUI_Main_xxxx_DateDialog(Core* _C, const std::string &
             DateQ.truncate(10+1+8);
             QDateTime DateTime=QDateTime::fromString(DateQ, Qt::ISODate);
             time_t Time=DateTime.toTime_t();
-            DateQ=QString::fromAscii(ctime(&Time));
+            DateQ=QString::fromLatin1(ctime(&Time));
             DateQ.truncate(24);
             DateQ.insert(0, "&Set date and time to "); //If you change this, change the DateDialog button click text too
             Date=new QPushButton(DateQ);
@@ -192,7 +192,7 @@ void GUI_Main_xxxx_DateDialog::OnAccept ()
             MessageBox.setStandardButtons(QMessageBox::Ok);
         #endif // (QT_VERSION >= 0x040200)
         MessageBox.setIcon(QMessageBox::Warning);
-        MessageBox.setWindowIcon(QIcon(":/Image/Brand/Logo.gif"));
+        MessageBox.setWindowIcon(QIcon(":/Image/Brand/Logo.png"));
         MessageBox.exec();
         return;
     }
@@ -251,7 +251,7 @@ void GUI_Main_xxxx_DateDialog::OnMenu_Date()
 {
     if (Date->text().contains("date and time"))
     {
-        std::string Value=Date->text().replace("&Set date and time to ", "").toAscii().data();
+        std::string Value=Date->text().replace("&Set date and time to ", "").toLatin1().data();
         int Month=0;
         if (Value[4]=='J' && Value[5]=='a' && Value[6]=='n') Month= 1;
         if (Value[4]=='F' && Value[5]=='e' && Value[6]=='b') Month= 2;
@@ -289,7 +289,7 @@ void GUI_Main_xxxx_DateDialog::OnMenu_Calendar ()
     {
         if (Field=="IDIT")
         {
-            std::string Value=PlainText.toAscii().data();
+            std::string Value=PlainText.toLatin1().data();
             if (Value.size()==24)
             {
                 int Month=0;

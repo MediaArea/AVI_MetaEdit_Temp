@@ -14,8 +14,8 @@
 
 //---------------------------------------------------------------------------
 #include "GUI/Qt/GUI_Main.h"
-#include <QtGui/QDialog>
-#include <QtGui/QDialog>
+#include <QDialog>
+#include <QDialog>
 #include <string>
 class QTabWidget;
 class QPushButton;

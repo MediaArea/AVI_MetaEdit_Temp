@@ -12,16 +12,16 @@
 #include "Common/Core.h"
 #include "ZenLib/Ztring.h"
 #include "ZenLib/File.h"
-#include <QtGui/QLabel>
+#include <QLabel>
 #include <QtCore/QEvent>
-#include <QtGui/QFont>
-#include <QtGui/QVBoxLayout>
-#include <QtGui/QPushButton>
-#include <QtGui/QDialogButtonBox>
-#include <QtGui/QTextEdit>
-#include <QtGui/QLabel>
-#include <QtGui/QFileDialog>
-#include <QtGui/QMessageBox>
+#include <QFont>
+#include <QVBoxLayout>
+#include <QPushButton>
+#include <QDialogButtonBox>
+#include <QTextEdit>
+#include <QLabel>
+#include <QFileDialog>
+#include <QMessageBox>
 //---------------------------------------------------------------------------
 
 //***************************************************************************
@@ -40,7 +40,7 @@ GUI_Main_xxxx_TextEditDialog::GUI_Main_xxxx_TextEditDialog(Core* _C, const std::
     //Configuration
     setWindowFlags(windowFlags()&(0xFFFFFFFF-Qt::WindowContextHelpButtonHint));
     setWindowTitle(QString::fromUtf8(Field.c_str()));
-    setWindowIcon (QIcon(":/Image/Brand/Logo.gif"));
+    setWindowIcon (QIcon(":/Image/Brand/Logo.png"));
 
     //Buttons
     Load=new QPushButton("&Import file...");
@@ -90,7 +90,7 @@ void GUI_Main_xxxx_TextEditDialog::OnAccept ()
             MessageBox.setStandardButtons(QMessageBox::Ok);
         #endif // (QT_VERSION >= 0x040200)
         MessageBox.setIcon(QMessageBox::Warning);
-        MessageBox.setWindowIcon(QIcon(":/Image/Brand/Logo.gif"));
+        MessageBox.setWindowIcon(QIcon(":/Image/Brand/Logo.png"));
         MessageBox.exec();
         return;
     }

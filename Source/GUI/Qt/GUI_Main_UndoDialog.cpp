@@ -12,20 +12,20 @@
 #include "Common/Core.h"
 #include "ZenLib/Ztring.h"
 #include "ZenLib/File.h"
-#include <QtGui/QLabel>
+#include <QLabel>
 #include <QtCore/QEvent>
-#include <QtGui/QFont>
-#include <QtGui/QGridLayout>
-#include <QtGui/QPushButton>
-#include <QtGui/QDialogButtonBox>
-#include <QtGui/QListWidget>
-#include <QtGui/QFileDialog>
-#include <QtGui/QApplication>
-#include <QtGui/QDesktopWidget>
-#include <QtGui/QComboBox>
-#include <QtGui/QTextEdit>
-#include <QtGui/QMessageBox>
-#include <QtGui/QDesktopWidget>
+#include <QFont>
+#include <QGridLayout>
+#include <QPushButton>
+#include <QDialogButtonBox>
+#include <QListWidget>
+#include <QFileDialog>
+#include <QApplication>
+#include <QDesktopWidget>
+#include <QComboBox>
+#include <QTextEdit>
+#include <QMessageBox>
+#include <QDesktopWidget>
 //---------------------------------------------------------------------------
 
 //***************************************************************************
@@ -42,7 +42,7 @@ GUI_Main_UndoDialog::GUI_Main_UndoDialog(Core* _C, QWidget* parent)
     //Configuration
     setWindowFlags(windowFlags()&(0xFFFFFFFF-Qt::WindowContextHelpButtonHint));
     setWindowTitle("Undo last save oprerations");
-    setWindowIcon (QIcon(":/Image/Brand/Logo.gif"));
+    setWindowIcon (QIcon(":/Image/Brand/Logo.png"));
 
     //Buttons
     QDialogButtonBox* Dialog=new QDialogButtonBox(QDialogButtonBox::Open | QDialogButtonBox::Cancel);

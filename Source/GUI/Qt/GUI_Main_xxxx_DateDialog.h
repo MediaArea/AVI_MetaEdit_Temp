@@ -14,7 +14,7 @@
 
 //---------------------------------------------------------------------------
 class Core;
-#include <QtGui/QDialog>
+#include <QDialog>
 class QTabWidget;
 class QCalendarWidget;
 class QTextEdit;

@@ -7,7 +7,7 @@
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-#include <QtGui/QApplication>
+#include <QApplication>
 #ifdef __BORLANDC__
     #pragma hdrstop
 #endif
@@ -17,6 +17,11 @@
 #include <vector>
 #include <iostream>
 using namespace std;
+
+#include <QtCore/QtPlugin>
+#if defined(_WIN32) && QT_VERSION >= 0x00050000 //Qt5
+    Q_IMPORT_PLUGIN(QWindowsIntegrationPlugin)
+#endif
 
 #ifdef __MACOSX__
     #include <ApplicationServices/ApplicationServices.h>

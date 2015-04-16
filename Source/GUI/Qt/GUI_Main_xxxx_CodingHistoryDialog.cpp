@@ -12,20 +12,20 @@
 #include "Common/Core.h"
 #include "ZenLib/Ztring.h"
 #include "ZenLib/File.h"
-#include <QtGui/QLabel>
+#include <QLabel>
 #include <QtCore/QEvent>
-#include <QtGui/QFont>
-#include <QtGui/QVBoxLayout>
-#include <QtGui/QPushButton>
-#include <QtGui/QDialogButtonBox>
-#include <QtGui/QTableWidget>
-#include <QtGui/QFileDialog>
-#include <QtGui/QApplication>
-#include <QtGui/QDesktopWidget>
-#include <QtGui/QComboBox>
-#include <QtGui/QTextEdit>
-#include <QtGui/QMessageBox>
-#include <QtGui/QDesktopWidget>
+#include <QFont>
+#include <QVBoxLayout>
+#include <QPushButton>
+#include <QDialogButtonBox>
+#include <QTableWidget>
+#include <QFileDialog>
+#include <QApplication>
+#include <QDesktopWidget>
+#include <QComboBox>
+#include <QTextEdit>
+#include <QMessageBox>
+#include <QDesktopWidget>
 //---------------------------------------------------------------------------
 
 //***************************************************************************
@@ -318,7 +318,7 @@ GUI_Main_xxxx_CodingHistoryDialog::GUI_Main_xxxx_CodingHistoryDialog(Core* C_, c
     //Configuration
     setWindowFlags(windowFlags()&(0xFFFFFFFF-Qt::WindowContextHelpButtonHint));
     setWindowTitle("Coding History");
-    setWindowIcon (QIcon(":/Image/Brand/Logo.gif"));
+    setWindowIcon (QIcon(":/Image/Brand/Logo.png"));
 
     //Buttons
     Load=new QPushButton("&Load file...");
@@ -392,7 +392,7 @@ void GUI_Main_xxxx_CodingHistoryDialog::OnAccept ()
             MessageBox.setStandardButtons(QMessageBox::Ok);
         #endif // (QT_VERSION >= 0x040200)
         MessageBox.setIcon(QMessageBox::Warning);
-        MessageBox.setWindowIcon(QIcon(":/Image/Brand/Logo.gif"));
+        MessageBox.setWindowIcon(QIcon(":/Image/Brand/Logo.png"));
         MessageBox.exec();
         return;
     }
@@ -728,7 +728,7 @@ void GUI_Main_xxxx_CodingHistoryDialog::Text2List ()
                     MessageBox.setStandardButtons(QMessageBox::Close);
                 #endif // (QT_VERSION >= 0x040200)
             MessageBox.setIcon(QMessageBox::Critical);
-            MessageBox.setWindowIcon(QIcon(":/Image/Brand/Logo.gif"));
+            MessageBox.setWindowIcon(QIcon(":/Image/Brand/Logo.png"));
             MessageBox.exec();
         }
 
@@ -755,7 +755,7 @@ void GUI_Main_xxxx_CodingHistoryDialog::Text2List ()
             #endif // (QT_VERSION >= 0x040300)
         #endif // (QT_VERSION >= 0x040200)
         MessageBox.setIcon(QMessageBox::Question);
-        MessageBox.setWindowIcon(QIcon(":/Image/Brand/Logo.gif"));
+        MessageBox.setWindowIcon(QIcon(":/Image/Brand/Logo.png"));
         switch (MessageBox.exec())
         {
             case QMessageBox::No    :   //Save was clicked

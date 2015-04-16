@@ -11,14 +11,14 @@
 #include "GUI/Qt/GUI_Main.h"
 #include "GUI/Qt/GUI_Main_UndoDialog.h"
 #include "Common/Core.h"
-#include <QtGui/QMenuBar>
-#include <QtGui/QToolBar>
-#include <QtGui/QFileDialog>
-#include <QtGui/QDesktopServices>
-#include <QtGui/QMessageBox>
-#include <QtGui/QProgressDialog>
-#include <QtGui/QApplication>
-#include <QtGui/QListWidget>
+#include <QMenuBar>
+#include <QToolBar>
+#include <QFileDialog>
+#include <QDesktopServices>
+#include <QMessageBox>
+#include <QProgressDialog>
+#include <QApplication>
+#include <QListWidget>
 #include <QtCore/QThread>
 #include <QtCore/QUrl>
 #include <QtCore/QEvent>
@@ -296,7 +296,7 @@ void GUI_Main::Menu_Create()
     Menu_Help_About->setStatusTip(tr(""));
     connect(Menu_Help_About, SIGNAL(triggered()), this, SLOT(OnMenu_Help_About()));
 
-    Menu_Help_Brand_Website = new QAction(QIcon(":/Image/Brand/Logo.gif"), tr("U.S. National Archives website"), this);
+    Menu_Help_Brand_Website = new QAction(QIcon(":/Image/Brand/Logo.png"), tr("U.S. National Archives website"), this);
     Menu_Help_Brand_Website->setShortcut(tr(""));
     Menu_Help_Brand_Website->setStatusTip(tr(""));
     connect(Menu_Help_Brand_Website, SIGNAL(triggered()), this, SLOT(OnMenu_Help_Brand_Website()));
@@ -863,7 +863,7 @@ void GUI_Main::OnMenu_Options_Overwrite_Reject(bool)
             #endif // (QT_VERSION >= 0x040300)
         #endif // (QT_VERSION >= 0x040200)
         MessageBox.setIcon(QMessageBox::Warning);
-        MessageBox.setWindowIcon(QIcon(":/Image/Brand/Logo.gif"));
+        MessageBox.setWindowIcon(QIcon(":/Image/Brand/Logo.png"));
         switch (MessageBox.exec())
         {
             case QMessageBox::Save    : // Save was clicked
@@ -931,7 +931,7 @@ void GUI_Main::OnMenu_Options_GenerateMD5(bool)
             #endif // (QT_VERSION >= 0x040300)
         #endif // (QT_VERSION >= 0x040200)
         MessageBox.setIcon(QMessageBox::Warning);
-        MessageBox.setWindowIcon(QIcon(":/Image/Brand/Logo.gif"));
+        MessageBox.setWindowIcon(QIcon(":/Image/Brand/Logo.png"));
         switch (MessageBox.exec())
         {
             case QMessageBox::Yes     : // Yes was clicked
@@ -1039,7 +1039,7 @@ void GUI_Main::OnMenu_Options_EmbedMD5(bool)
                 #endif // (QT_VERSION >= 0x040300)
             #endif // (QT_VERSION >= 0x040200)
             MessageBox.setIcon(QMessageBox::Warning);
-            MessageBox.setWindowIcon(QIcon(":/Image/Brand/Logo.gif"));
+            MessageBox.setWindowIcon(QIcon(":/Image/Brand/Logo.png"));
             switch (MessageBox.exec())
             {
                 case QMessageBox::Yes     : // Yes was clicked
@@ -1073,7 +1073,7 @@ void GUI_Main::OnMenu_Options_EmbedMD5_AuthorizeOverWritting(bool)
                 #endif // (QT_VERSION >= 0x040300)
             #endif // (QT_VERSION >= 0x040200)
             MessageBox.setIcon(QMessageBox::Warning);
-            MessageBox.setWindowIcon(QIcon(":/Image/Brand/Logo.gif"));
+            MessageBox.setWindowIcon(QIcon(":/Image/Brand/Logo.png"));
             switch (MessageBox.exec())
             {
                 case QMessageBox::Yes     : // Yes was clicked
@@ -1126,7 +1126,7 @@ void GUI_Main::OnMenu_Options_Preferences()
             #endif // (QT_VERSION >= 0x040300)
         #endif // (QT_VERSION >= 0x040200)
         MessageBox.setIcon(QMessageBox::Warning);
-        MessageBox.setWindowIcon(QIcon(":/Image/Brand/Logo.gif"));
+        MessageBox.setWindowIcon(QIcon(":/Image/Brand/Logo.png"));
         switch (MessageBox.exec())
         {
             case QMessageBox::Yes     : // Yes was clicked

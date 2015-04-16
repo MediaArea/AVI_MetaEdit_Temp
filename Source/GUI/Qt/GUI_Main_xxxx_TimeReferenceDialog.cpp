@@ -12,16 +12,16 @@
 #include "Common/Core.h"
 #include "ZenLib/Ztring.h"
 #include "ZenLib/File.h"
-#include <QtGui/QTimeEdit>
-#include <QtGui/QLabel>
-#include <QtGui/QLineEdit>
+#include <QTimeEdit>
+#include <QLabel>
+#include <QLineEdit>
 #include <QtCore/QEvent>
-#include <QtGui/QGridLayout>
-#include <QtGui/QDialogButtonBox>
-#include <QtGui/QIcon>
-#include <QtGui/QMessageBox>
-#include <QtGui/QSpinBox>
-#include <QtGui/QCheckBox>
+#include <QGridLayout>
+#include <QDialogButtonBox>
+#include <QIcon>
+#include <QMessageBox>
+#include <QSpinBox>
+#include <QCheckBox>
 #include <ZenLib/Ztring.h>
 using namespace ZenLib;
 //---------------------------------------------------------------------------
@@ -42,7 +42,7 @@ GUI_Main_xxxx_TimeReferenceDialog::GUI_Main_xxxx_TimeReferenceDialog(Core* _C, c
     //Configuration
     setWindowFlags(windowFlags()&(0xFFFFFFFF-Qt::WindowContextHelpButtonHint));
     setWindowTitle(Field.c_str());
-    setWindowIcon (QIcon(":/Image/Brand/Logo.gif"));
+    setWindowIcon (QIcon(":/Image/Brand/Logo.png"));
 
     //Get info
     FrameRate=Ztring(C->Get(FileName, "FrameRate")).To_float32();
@@ -133,7 +133,7 @@ void GUI_Main_xxxx_TimeReferenceDialog::OnAccept ()
             MessageBox.setStandardButtons(QMessageBox::Ok);
         #endif // (QT_VERSION >= 0x040200)
         MessageBox.setIcon(QMessageBox::Warning);
-        MessageBox.setWindowIcon(QIcon(":/Image/Brand/Logo.gif"));
+        MessageBox.setWindowIcon(QIcon(":/Image/Brand/Logo.png"));
         MessageBox.exec();
         return;
     }

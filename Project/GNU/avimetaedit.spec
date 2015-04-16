@@ -19,8 +19,17 @@ BuildRoot:		%{_tmppath}/%{name}-%{version}-%{release}-root
 BuildRequires:	dos2unix
 BuildRequires: 	gcc-c++
 BuildRequires:	pkgconfig
+BuildRequires:  automake
+BuildRequires:  autoconf
+BuildRequires:  libqt4-devel
+%if 0%{?fedora_version}
+BuildRequires:  qt-devel
+%endif
+%if 0%{?fedora_version}
+BuildRequires:  desktop-file-utils
+%endif
 %if 0%{?suse_version}
-BuildRequires:	update-desktop-files
+BuildRequires:  update-desktop-files
 %endif
 
 %description
@@ -33,20 +42,6 @@ AVI MetaEdit provides this service:
 %package gui
 Summary:	Supplies technical and tag information about a video or audio file (GUI)
 Group:		Productivity/Multimedia/Other
-BuildRequires:	libqt4-devel
-%if 0%{?suse_version}
-BuildRequires:	update-desktop-files
-%endif
-%if 0%{?centos_version} ||  0%{?rhel_version} || 0%{?fedora_version}
-Requires:	qt4 >= 4.0.0
-%endif
-%if 0%{?mandriva}
-Requires:	libqtgui4 >= 4.0.0
-%endif
-%if 0%{?suse_version} ||  0%{?opensuse_version}
-Requires:	libqt4 >= 4.0.0
-Requires:	libqt4-x11 >= 4.0.0
-%endif
 
 %description gui
 avimetaedit GUI (Graphical User Interface)

@@ -1,5 +1,5 @@
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AVI_MetaEdit_CLI", "CLI\AVI_MetaEdit_CLI.vcxproj", "{8A1AE679-131A-493C-86CA-91179B0955A4}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AVI_MetaEdit_GUI", "GUI\AVI_MetaEdit_GUI.vcxproj", "{E3711417-8DF9-47DE-AADE-EA3832EA6BDC}"

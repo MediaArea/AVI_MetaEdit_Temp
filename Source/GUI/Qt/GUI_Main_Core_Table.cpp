@@ -17,18 +17,18 @@
 #include "GUI/Qt/GUI_Main_xxxx_TimeReferenceDialog.h"
 #include "Common/Core.h"
 #include "ZenLib/ZtringListList.h"
-#include <QtGui/QLabel>
+#include <QLabel>
 #include <QtCore/QEvent>
-#include <QtGui/QFont>
-#include <QtGui/QTextEdit>
-#include <QtGui/QDateEdit>
-#include <QtGui/QSpinBox>
-#include <QtGui/QItemDelegate>
-#include <QtGui/QStandardItemModel>
+#include <QFont>
+#include <QTextEdit>
+#include <QDateEdit>
+#include <QSpinBox>
+#include <QItemDelegate>
+#include <QStandardItemModel>
 #include <QtCore/QDate>
-#include <QtGui/QContextMenuEvent>
-#include <QtGui/QAction>
-#include <QtGui/QMenu>
+#include <QContextMenuEvent>
+#include <QAction>
+#include <QMenu>
 using namespace ZenLib;
 using namespace std;
 //---------------------------------------------------------------------------

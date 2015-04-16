@@ -14,7 +14,7 @@
 
 //---------------------------------------------------------------------------
 #include "GUI/Qt/GUI_Main_xxxx__Common.h"
-#include <QtGui/QTableWidget>
+#include <QTableWidget>
 #include <string>
 class QEvent;
 class GUI_Main;

@@ -14,7 +14,7 @@
 
 //---------------------------------------------------------------------------
 class Core;
-#include <QtGui/QDialog>
+#include <QDialog>
 #include <string>
 #include <ZenLib/Conf.h>
 class QTimeEdit;
