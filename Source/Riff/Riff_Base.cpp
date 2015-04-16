@@ -470,8 +470,6 @@ bool Riff_Base::WriteOut (bool Refactorize)
 
             }
             delete[] Buffer;
-            if (Chunk.Content.Size%2)
-                Global->Out.Write((int8u*)"\x00", 1);
         }
         else if (Chunk.Content.Size)
             Global->Out.Write(Chunk.Content.Buffer, Chunk.Content.Size);

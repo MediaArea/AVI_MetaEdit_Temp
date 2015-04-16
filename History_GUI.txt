@@ -7,6 +7,7 @@ x Correction
 Version 1.0.1, 2015-
 -------------
 x Potential crash during verification of a MD5 present in the file
+x Potential file corruption (insertion of 2 padding bytes instead of 1) when re-writing the file
 
 Version 1.0.0, 2012-01-18
 -------------
