@@ -19,7 +19,6 @@
 #include "GUI/Qt/GUI_Main_Core_Table.h"
 #include "GUI/Qt/GUI_Main_Core_Text.h"
 #include "GUI/Qt/GUI_Main_Output_Log.h"
-#include "GUI/Qt/GUI_Main_Output_stderr.h"
 #include "GUI/Qt/GUI_Main_Output_Trace.h"
 #include "GUI/Qt/GUI_Preferences.h"
 #include <QtCore/QEvent>
@@ -197,9 +196,11 @@ void GUI_Main::dropEvent(QDropEvent *event)
     const QMimeData* Data=event->mimeData ();
     if (event->mimeData()->hasUrls())
     {
-        foreach (QUrl url, event->mimeData()->urls())
+        //foreach (QUrl url, event->mimeData()->urls())
+        QList<QUrl> urls=event->mimeData()->urls();
+        for (int Pos=0; Pos<urls.size(); Pos++)
         {
-            Ztring File; File.From_UTF8(url.toLocalFile().toUtf8().data());
+            Ztring File; File.From_UTF8(urls[Pos].toLocalFile().toUtf8().data());
             #ifdef __WINDOWS__
                 File.FindAndReplace("/", "\\", 0, Ztring_Recursive);
             #endif // __WINDOWS__

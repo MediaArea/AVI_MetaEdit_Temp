@@ -104,7 +104,7 @@ private:
     QAction*        Menu_Help_Brand_Website;
 
 
-public slots:
+public Q_SLOTS:
     //Menu - Actions
     void OnMenu_File_Open_Files                     ();
     void OnMenu_File_Open_Directory                 ();

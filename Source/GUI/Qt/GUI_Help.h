@@ -35,7 +35,7 @@ private:
     QTabWidget*     Central;
     QPushButton*    Close;
 
- private slots:
+ private Q_SLOTS:
     void OnAnchorClicked(const QUrl &link);
 };
 

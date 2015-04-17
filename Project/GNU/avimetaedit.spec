@@ -11,7 +11,7 @@ Version:		%avimetaedit_version
 Release:		1
 Summary:		Supplies technical and tag information about a video or audio file (CLI)
 Group:			Productivity/Multimedia/Other
-License:		GPL
+License:		GPL-2.0+
 URL:			http://mediaarea.net
 Packager:		Jerome Martinez <info@mediaarea.net>
 Source0:		avimetaedit_%{version}-1.tar.gz
@@ -71,21 +71,18 @@ pushd Project/GNU/CLI
 popd
 
 # now build GUI
-pushd Project/GNU/GUI
-	%__chmod +x autogen
-	./autogen
-	%configure
-
+pushd Project/QtCreator
+    qmake BINDIR=%{_bindir}
 	%__make %{?jobs:-j%{jobs}}
 popd
 
 %install
 pushd Project/GNU/CLI
-	%__make install-strip DESTDIR=%{buildroot}
+	%__make install DESTDIR=%{buildroot}
 popd
 
-pushd Project/GNU/GUI
-	%__make install-strip DESTDIR=%{buildroot}
+pushd Project/QtCreator
+    %__make install INSTALL_ROOT=%{buildroot}
 popd
 
 # icon
@@ -146,6 +143,6 @@ popd
 %{_datadir}/kde4/services/ServiceMenus/*.desktop
 
 %changelog
-* Tue Jan 01 2012 Jerome Martinez <info@mediaarea.net> - 1.0.0-0
+* Wed Jan 01 2014 MediaArea.net SARL <info@mediaarea.net> - 1.0.0-0
 - See History.txt for more info and real dates
 

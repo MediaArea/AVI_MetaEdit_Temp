@@ -138,7 +138,7 @@ private:
     QCheckBox**     CheckBoxes;
     QRadioButton**  RadioButtons;
 
- private slots:
+ private Q_SLOTS:
     void OnLoad();
     void OnSave();
     void OnRejected();

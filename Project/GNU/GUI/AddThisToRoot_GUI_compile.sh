@@ -21,11 +21,10 @@ Zen_Make()
 
 #############################################################################
 # AVI_MetaEdit
-if test -e Project/GNU/GUI/configure; then
- cd Project/GNU/GUI/
+if test -e Project/QtCreator/AVI_MetaEdit.pro; then
+ cd Project/QtCreator/
  test -e Makefile && rm Makefile
- chmod u+x configure
- ./configure $*
+ qmake PREFIX=/usr
  if test -e Makefile; then
   make clean
   Zen_Make
@@ -48,7 +47,7 @@ cd $Home
 #############################################################################
 # Going home
 cd $Home
-echo "AVI MetaEdit (GUI) executable is in Project/GNU/GUI"
-echo "For installing, cd Project/GNU/GUI && make install"
+echo "AVI MetaEdit (GUI) executable is in Project/QtCreator"
+echo "For installing, cd Project/QtCreator && make install"
 
 

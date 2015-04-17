@@ -69,7 +69,7 @@ public:
     QPushButton*                        Load;
     QPushButton*                        Save;
 
-private slots:
+private Q_SLOTS:
     //Actions
     void OnAccept                   ();
     void OnMenu_Load                ();

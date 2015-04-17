@@ -35,7 +35,7 @@ public:
     //Constructor/Destructor
     GUI_Main_xxxx__Common(Core* C, GUI_Main* parent);
 
-protected slots:
+protected Q_SLOTS:
     void OnItemSelectionChanged ();
 
 protected:

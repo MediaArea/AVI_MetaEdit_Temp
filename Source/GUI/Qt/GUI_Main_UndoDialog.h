@@ -39,7 +39,7 @@ public:
     QPushButton*                        Cancel;
     QPushButton*                        Valid;
 
-private slots:
+private Q_SLOTS:
     //Actions
     void currentItemChanged         (QListWidgetItem* Current, QListWidgetItem* Previous);
 

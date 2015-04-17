@@ -56,6 +56,7 @@ xcopy ..\Project\BCB\AVI_MetaEdit*.res AVI_MetaEdit_Source\Project\BCB /S
 xcopy ..\Project\MSVC2008\*.rc AVI_MetaEdit_Source\Project\MSVC2008\ /S
 xcopy ..\Project\MSVC2010\*.rc AVI_MetaEdit_Source\Project\MSVC2010\ /S
 xcopy ..\Project\GNU\* AVI_MetaEdit_Source\Project\GNU\ /S
+xcopy ..\Project\QtCreator\* AVI_MetaEdit_Source\Project\QtCreator\ /S
 
 @rem --- Copying : Release ---
 xcopy *.txt AVI_MetaEdit_Source\Release\

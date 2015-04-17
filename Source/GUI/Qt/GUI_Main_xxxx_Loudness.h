@@ -35,7 +35,7 @@ public:
     QDoubleSpinBox*     Loudness;
     QDialogButtonBox*   Dialog;
 
-private slots:
+private Q_SLOTS:
     //Actions
     void OnAccept                   ();
 

@@ -50,7 +50,7 @@ public:
     QDialogButtonBox*   Dialog;
     QPushButton*        Date;
 
-private slots:
+private Q_SLOTS:
     //Actions
     void OnAccept                   ();
     void OnCalendar_Changed         ();
